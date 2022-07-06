@@ -33,10 +33,8 @@ if __name__ == '__main__':
   
   st.markdown('<b>Center class</b>', unsafe_allow_html=True)
   
-  #image = []
-  #for i in range(10):
-   # image.append(Image.open(center_path+str(i)+'.png'))
-   
-  #st.image(image)
+  for i in range(10):
+   image.append(Image.open(center_path+str(i)+'.png'))
+   st.image(image)
 
 
