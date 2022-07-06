@@ -31,6 +31,6 @@ if __name__ == '__main__':
   st.write("Model evaluation for semiconductor wafermap detection and recognition using CNNs.")
   
   image=Image.open(center_path+'0.png')
-  st.image(image, caption='Class: center')
+  st.image(image, caption='<b>Class: center</b>')
 
 
