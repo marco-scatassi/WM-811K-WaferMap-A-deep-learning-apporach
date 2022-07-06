@@ -35,6 +35,7 @@ if __name__ == '__main__':
   
   for i in range(10):
    image = Image.open(center_path+str(i)+'.png')
+   image = image.resize((600, 400))
    st.image(image)
 
 
