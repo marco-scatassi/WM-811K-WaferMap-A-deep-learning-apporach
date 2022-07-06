@@ -53,6 +53,7 @@ if __name__ == '__main__':
   
   st.markdown('<b>Center class</b>', unsafe_allow_html=True)
   
-
-
+  col1, col2, col3, col4, col5 = st.columns(5)
+  cols = [col1, col2, col3, col4, col5]
+  
 
