@@ -25,9 +25,7 @@ none_path]
 
 
 st.set_page_config(layout = "wide")
-st.markdown(
-    unsafe_allow_html=True,
-)
+st.markdown(unsafe_allow_html=True)
 
 if __name__ == '__main__':
   st.title("WM-811K WaferMap")
