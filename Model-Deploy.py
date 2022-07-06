@@ -41,7 +41,7 @@ for i in range(len(failureTypes)):
   for j in range(10):
     image = Image.open(paths[i]+str(j)+'.png')
     image = image.resize((100, 100))
-    images[failureTypes[i]][j] = image
+    images[failureTypes[i]].append(image)
   
 
 st.set_page_config(layout = "wide")
