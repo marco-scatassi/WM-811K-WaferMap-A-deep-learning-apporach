@@ -35,7 +35,8 @@ if __name__ == '__main__':
   
   image = []
   for i in range(10):
-    image = Image.open(center_path+str(i)+'.png'
-    st.image(image, caption="image " + str(i))
+    image.append(Image.open(center_path+str(i)+'.png'))
+   
+  st.image(image)
 
 
