@@ -56,4 +56,6 @@ if __name__ == '__main__':
   col1, col2, col3, col4, col5 = st.columns(5)
   cols = [col1, col2, col3, col4, col5]
   
-
+  for i in range(len(cols)):
+    st.image(images['Center'][i])
+    st.image(images['Center'][i+5])
