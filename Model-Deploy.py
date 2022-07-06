@@ -25,7 +25,21 @@ none_path]
 
 
 st.set_page_config(layout = "wide")
-st.markdown(unsafe_allow_html=True)
+
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
+        width: 300px;
+    }
+    [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
+        width: 300px;
+        margin-left: -500px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 if __name__ == '__main__':
   st.title("WM-811K WaferMap")
