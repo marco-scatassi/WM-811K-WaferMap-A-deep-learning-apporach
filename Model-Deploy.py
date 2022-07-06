@@ -55,12 +55,13 @@ if __name__ == '__main__':
   
   with col1:
     st.subheader("Failure Types")
-    st.selectbox("", failureTypes)
+    selectedType = st.selectbox("", failureTypes)
+    st.write("")
   
   col1, col2, col3, col4, col5 = st.columns(5)
   cols = [col1, col2, col3, col4, col5]
   
   for i in range(len(cols)):
     with cols[i]:
-      st.image(images['Center'][i])
-      st.image(images['Center'][i+5])
+      st.image(images[selectedType][i], caption = str(i))
+      st.image(images[selectedType][i+5], caption = str(i+5))
