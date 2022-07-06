@@ -26,25 +26,12 @@ none_path]
 
 st.set_page_config(layout = "wide")
 
-st.markdown(
-    """
-    <style>
-    [data-testid="stSidebar"][aria-expanded="true"] > div:first-child {
-        width: 300px;
-    }
-    [data-testid="stSidebar"][aria-expanded="false"] > div:first-child {
-        width: 300px;
-        margin-left: -500px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
 
 if __name__ == '__main__':
   st.title("WM-811K WaferMap")
   st.write("Model evaluation for semiconductor wafermap detection and recognition using CNNs.")
   
+  st.markdown('<p style="font-family:Courier; color:Black; font-size: 15px;">Center class</p>')
   image=Image.open(center_path+'0.png')
   st.image(image, caption="<b>Class: center</b>")
 
