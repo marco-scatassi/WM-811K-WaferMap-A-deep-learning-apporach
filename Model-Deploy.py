@@ -31,8 +31,12 @@ if __name__ == '__main__':
   st.title("WM-811K WaferMap")
   st.write("Model evaluation for semiconductor wafermap detection and recognition using CNNs.")
   
-  st.markdown('<p style="font-family:Courier; color:Black; font-size: 15px;">Center class</p>', unsafe_allow_html=True)
-  image=Image.open(center_path+'0.png')
+  st.markdown('<b>Center class</b>', unsafe_allow_html=True)
+  
+  image = []
+  for i in range(10):
+    image.append(Image.open(center_path+str(i)+'.png')
+  
   st.image(image, caption="<b>Class: center</b>")
 
 
