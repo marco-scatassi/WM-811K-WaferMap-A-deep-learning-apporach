@@ -54,7 +54,8 @@ if __name__ == '__main__':
   col1, col2 = st.columns([1,5])
   
   with col1:
-    st.selectbox("**Failure Types**", failureTypes)
+    st.subheader("Failure Types")
+    st.selectbox("", failureTypes)
   
   col1, col2, col3, col4, col5 = st.columns(5)
   cols = [col1, col2, col3, col4, col5]
