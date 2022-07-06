@@ -13,16 +13,36 @@ scratch_path = 'Image_for_deploy/Scratch/'
 none_path = 'Image_for_deploy/none/'
 
 paths = [center_path,
-donut_path,
-edgeLoc_path,
-edgeRing_path,
-loc_path,
-edgeLoc_path,
-nearFull_path,
-random_path,
-scratch_path,
-none_path]
+  donut_path,
+  edgeLoc_path,
+  edgeRing_path,
+  loc_path,
+  edgeLoc_path,
+  nearFull_path,
+  random_path,
+  scratch_path,
+  none_path]
 
+failureTypes = ['Center',
+  'Donut',
+  'Edge-Loc',
+  'Edge-Ring',
+  'Loc',
+  'Edge-Loc',
+  'Near-full',
+  'Random',
+  'Scratch',
+  'none']
+
+images = dict()
+
+for i in range(len(failureTypes)):
+  images[failureTypes[i]] = []
+  for j in range(10):
+    image = Image.open(paths[i]+str(j)+'.png')
+    image = image.resize((100, 100))
+    images[failureTypes[i]][j] = image
+  
 
 st.set_page_config(layout = "wide")
 
@@ -33,9 +53,6 @@ if __name__ == '__main__':
   
   st.markdown('<b>Center class</b>', unsafe_allow_html=True)
   
-  for i in range(10):
-   image = Image.open(center_path+str(i)+'.png')
-   image = image.resize((200, 200))
-   st.image(image)
+
 
 
