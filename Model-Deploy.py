@@ -51,7 +51,7 @@ if __name__ == '__main__':
   st.title("WM-811K WaferMap")
   st.write("Model evaluation for semiconductor wafermap detection and recognition using CNNs.")
   
-  st.markdown('<b>Center class</b>', unsafe_allow_html=True)
+  st.selectbox("Failure Types", failureTypes)
   
   col1, col2, col3, col4, col5 = st.columns(5)
   cols = [col1, col2, col3, col4, col5]
