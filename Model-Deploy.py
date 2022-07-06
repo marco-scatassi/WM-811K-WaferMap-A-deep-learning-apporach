@@ -63,5 +63,5 @@ if __name__ == '__main__':
   
   for i in range(len(cols)):
     with cols[i]:
-      st.image(images[selectedType][i], caption = str(i))
-      st.image(images[selectedType][i+5], caption = str(i+5))
+      st.image(images[selectedType][i], caption = 'Image '+str(i))
+      st.image(images[selectedType][i+5], caption = 'Image '+str(i+5))
