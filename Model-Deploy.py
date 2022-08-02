@@ -75,8 +75,10 @@ if __name__ == '__main__':
   for i in range(len(cols)):
     with cols[i]:
       st.image(imagesDisplay[selectedType][i])
-      buttons.append(st.button('Image '+str(i)), on_click = model.evaluate(imagesDeploy[selectedType][i]))
+      buttons.append(st.button('Image '+str(i)))
       st.write('##')
       st.image(imagesDisplay[selectedType][i+5])
       buttons.append(st.button('Image '+str(i+5)))
       
+  if buttons[0]:
+    model.predict(imagesDeploy[failureTypes[0]])
