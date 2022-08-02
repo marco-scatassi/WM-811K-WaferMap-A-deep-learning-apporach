@@ -80,11 +80,11 @@ if __name__ == '__main__':
   
   for i in range(len(cols)):
     with cols[i]:
-      st.image(imagesDisplay[selectedType][i], on_click = prediction(imagesDeploy[selectedType][i]))
-      buttons.append(st.button('Image '+str(i)))
+      st.image(imagesDisplay[selectedType][i])
+      buttons.append(st.button('Image '+str(i)), on_click = prediction(imagesDeploy[selectedType][i]))
       st.write('##')
       st.image(imagesDisplay[selectedType][i+5])
-      buttons.append(st.button('Image '+str(i+5)))
+      buttons.append(st.button('Image '+str(i+5)), on_click = prediction(imagesDeploy[selectedType][i+5]))
       
 
     
