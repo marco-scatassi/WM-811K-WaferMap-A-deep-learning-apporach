@@ -87,4 +87,4 @@ if __name__ == '__main__':
     im = np.asarray(pill_im)
     st.write(im.shape)
     im = np.expand_dims(im, axis=0)
-    model.call(im)
+    st.write(model.evaluate(im))
