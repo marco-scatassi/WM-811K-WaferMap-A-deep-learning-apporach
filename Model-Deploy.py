@@ -52,15 +52,16 @@ for i in range(len(failureTypes)):
     
 model_path = 'Models/model0_1'
 model = keras.models.load_model(model_path)
-  
+
+pr = ''
 
 st.set_page_config(layout = "wide")
 
 def prediction(im):
   im = np.asarray(im)
   im = np.expand_dims(im, axis=0)
-  global p
-  p = model.predict(im)
+  global pr
+  pr = model.predict(im)
 
 if __name__ == '__main__':
   st.title("WM-811K WaferMap")
