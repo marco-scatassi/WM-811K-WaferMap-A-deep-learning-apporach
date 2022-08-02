@@ -81,4 +81,5 @@ if __name__ == '__main__':
       buttons.append(st.button('Image '+str(i+5)))
       
   if buttons[0]:
-    model.predict(imagesDeploy[failureTypes[0]])
+    im = imagesDeploy[failureTypes[0]][0]
+    model.predict(im)
