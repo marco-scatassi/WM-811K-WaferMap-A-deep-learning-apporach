@@ -49,7 +49,7 @@ for i in range(len(failureTypes)):
     image = image.resize((100, 100))
     imagesDisplay[failureTypes[i]].append(image)
     
-model_path = 'Models/model_01'
+model_path = 'Models/model0_1'
 model = keras.models.load_model(model_path)
   
 
