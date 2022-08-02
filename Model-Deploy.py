@@ -66,4 +66,6 @@ if __name__ == '__main__':
       st.image(images[selectedType][i], caption = 'Image '+str(i))
       st.image(images[selectedType][i+5], caption = 'Image '+str(i+5))
       
-  st.write("Run on image: "), b1 = st.button('Image 0'), b2 = st.button('Image 1')
+  st.write("Run on image: ")
+  b1 = st.button('Image 0')
+  b2 = st.button('Image 1')
