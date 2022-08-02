@@ -85,7 +85,7 @@ if __name__ == '__main__':
     pill_im = imagesDeploy[failureTypes[0]][0]
     st.write(pill_im)
     im = np.asarray(pill_im)
-    st.write(im)
+    st.write(im.shape)
     im.reshape((im.shape[0], im.shape[1], 4))
-    st.write(im.size)
+    st.write(im.shape)
     model.predict(im)
