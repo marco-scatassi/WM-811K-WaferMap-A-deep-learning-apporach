@@ -81,5 +81,6 @@ if __name__ == '__main__':
       buttons.append(st.button('Image '+str(i+5)))
       
   if buttons[0]:
-    im = imagesDeploy[failureTypes[0]][0]
+    pill_im = imagesDeploy[failureTypes[0]][0]
+    im = tf.keras.preprocessing.image.img_to_array(pill_im)
     model.predict(im)
