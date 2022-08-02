@@ -45,7 +45,7 @@ for i in range(len(failureTypes)):
   imagesDeploy[failureTypes[i]] = []
   imagesDisplay[failureTypes[i]] = []
   for j in range(10):
-    image = Image.open(paths[i]+str(j)+'.png')
+    image = tf.keras.utils.load_img(paths[i]+str(j)+'.png')
     imagesDeploy[failureTypes[i]].append(image)
     image = image.resize((100, 100))
     imagesDisplay[failureTypes[i]].append(image)
@@ -82,8 +82,8 @@ if __name__ == '__main__':
       buttons.append(st.button('Image '+str(i+5)))
       
   if buttons[0]:
-    pill_im = imagesDeploy[failureTypes[0]][0]
-    st.write(pill_im)
+    im = imagesDeploy[failureTypes[0]][0]
+    st.write(im)
     im = np.asarray(pill_im)
     st.write(im.shape)
     im = im[:,:,0:3]
