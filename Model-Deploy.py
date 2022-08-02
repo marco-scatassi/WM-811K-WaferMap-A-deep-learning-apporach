@@ -64,10 +64,10 @@ if __name__ == '__main__':
   buttons = []
   
   for i in range(len(cols)):
-    buttons.append(st.button('Image '+str(i)))
-    buttons.append(st.button('Image '+str(i+5)))
     with cols[i]:
       st.image(images[selectedType][i], caption = 'Image '+str(i))
+      buttons.append(st.button('Image '+str(i)))
       st.image(images[selectedType][i+5], caption = 'Image '+str(i+5))
+      buttons.append(st.button('Image '+str(i+5)))
       
   st.write("Run on image: ")
