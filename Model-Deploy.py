@@ -61,9 +61,13 @@ if __name__ == '__main__':
   col1, col2, col3, col4, col5 = st.columns(5)
   cols = [col1, col2, col3, col4, col5]
   
+  buttons = []
+  
   for i in range(len(cols)):
+    b.append(st.button('Image '+str(i)))
+    b.append(st.button('Image '+str(i+5)))
     with cols[i]:
-      st.image(images[selectedType][i], caption = st.button('Image '+str(i)))
-      st.image(images[selectedType][i+5], caption = st.button('Image '+str(i+5)))
+      st.image(images[selectedType][i], caption = 'Image '+str(i))
+      st.image(images[selectedType][i+5], caption = 'Image '+str(i+5))
       
   st.write("Run on image: ")
