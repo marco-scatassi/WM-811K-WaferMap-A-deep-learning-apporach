@@ -56,13 +56,12 @@ model = keras.models.load_model(model_path)
 
 st.set_page_config(layout = "wide")
 
-p = np.empty([1,9])
 
 def prediction(im):
   im = np.asarray(im)
   im = np.expand_dims(im, axis=0)
-  global p
   p = model.predict(im)
+  return p
 
 if __name__ == '__main__':
   st.title("WM-811K WaferMap")
