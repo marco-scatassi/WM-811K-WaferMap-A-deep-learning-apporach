@@ -56,7 +56,7 @@ model = keras.models.load_model(model_path)
 def prediction(im):
   im = np.asarray(im)
   im = np.expand_dims(im, axis=0)
-  return model.predict(im)
+  st.write(model.predict(im))
   
 
 st.set_page_config(layout = "wide")
@@ -81,7 +81,7 @@ if __name__ == '__main__':
   for i in range(len(cols)):
     with cols[i]:
       st.image(imagesDisplay[selectedType][i])
-      buttons.append(st.button('Image '+str(i), on_click = prediction(imagesDeploy[selectedType][i])))
+      buttons.append(st.button('Image '+str(i), on_click = prediction, args = (imagesDeploy[selectedType][i])))
       st.write('##')
       st.image(imagesDisplay[selectedType][i+5])
       buttons.append(st.button('Image '+str(i+5), on_click = prediction(imagesDeploy[selectedType][i+5])))
