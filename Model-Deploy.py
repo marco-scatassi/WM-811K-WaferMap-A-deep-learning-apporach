@@ -50,7 +50,7 @@ for i in range(len(failureTypes)):
     imagesDisplay[failureTypes[i]].append(image)
     
 model_path = 'Models/model_01'
-model = keras.model.load_model(model_path)
+model = keras.models.load_model(model_path)
   
 
 st.set_page_config(layout = "wide")
