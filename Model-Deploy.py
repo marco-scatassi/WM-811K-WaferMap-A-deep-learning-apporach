@@ -67,6 +67,7 @@ if __name__ == '__main__':
     with cols[i]:
       st.image(images[selectedType][i])
       buttons.append(st.button('  Image '+str(i)))
+      st.write('#')
       st.image(images[selectedType][i+5])
       buttons.append(st.button('  Image '+str(i+5)))
       
