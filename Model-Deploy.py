@@ -34,14 +34,19 @@ failureTypes = ['Center',
   'Scratch',
   'none']
 
-images = dict()
+imagesDisplay = dict()
+imagesDeploy = dict()
 
 for i in range(len(failureTypes)):
   images[failureTypes[i]] = []
   for j in range(10):
     image = Image.open(paths[i]+str(j)+'.png')
+    imagesDeploy[failureTypes[i]].append(image)
     image = image.resize((100, 100))
-    images[failureTypes[i]].append(image)
+    imagesDisplay[failureTypes[i]].append(image)
+    
+model_path = ''
+model = keras.model.load_model()
   
 
 st.set_page_config(layout = "wide")
@@ -65,10 +70,9 @@ if __name__ == '__main__':
   
   for i in range(len(cols)):
     with cols[i]:
-      st.image(images[selectedType][i])
-      buttons.append(st.button('  Image '+str(i)))
+      st.image(imagesDisplay[selectedType][i])
+      buttons.append(st.button('Image '+str(i)))
       st.write('##')
-      st.image(images[selectedType][i+5])
-      buttons.append(st.button('  Image '+str(i+5)))
+      st.image(imagesDisplay[selectedType][i+5])
+      buttons.append(st.button('Image '+str(i+5)))
       
-  st.write("Run on image: ")
