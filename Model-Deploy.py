@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+from tensorflow import keras
 
 center_path = 'Image_for_deploy/Center/'
 donut_path = 'Image_for_deploy/Donut/'
