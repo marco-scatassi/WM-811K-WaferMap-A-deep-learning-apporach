@@ -38,7 +38,8 @@ imagesDisplay = dict()
 imagesDeploy = dict()
 
 for i in range(len(failureTypes)):
-  images[failureTypes[i]] = []
+  imagesDeploy[failureTypes[i]] = []
+  imagesDisplay[failureTypes[i]] = []
   for j in range(10):
     image = Image.open(paths[i]+str(j)+'.png')
     imagesDeploy[failureTypes[i]].append(image)
