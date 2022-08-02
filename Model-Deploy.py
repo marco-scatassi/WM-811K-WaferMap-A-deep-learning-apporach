@@ -52,6 +52,10 @@ for i in range(len(failureTypes)):
     
 model_path = 'Models/model0_1'
 model = keras.models.load_model(model_path)
+
+def prediction(im):
+  im = np.asarray(im)
+  st.write(model.predict(im))
   
 
 st.set_page_config(layout = "wide")
@@ -75,16 +79,11 @@ if __name__ == '__main__':
   
   for i in range(len(cols)):
     with cols[i]:
-      st.image(imagesDisplay[selectedType][i])
+      st.image(imagesDisplay[selectedType][i], on_click = prediction(imagesDisplay[selectedType][i]))
       buttons.append(st.button('Image '+str(i)))
       st.write('##')
       st.image(imagesDisplay[selectedType][i+5])
       buttons.append(st.button('Image '+str(i+5)))
       
-  if buttons[0]:
-    pill_im = imagesDeploy[failureTypes[0]][0]
-    st.write(pill_im)
-    im = np.asarray(pill_im)
-    st.write(im.shape)
-    im = np.expand_dims(im, axis=0)
-    st.write(model.predict(im))
+
+    
