@@ -61,6 +61,7 @@ p = np.empty([1,9])
 def prediction(im):
   im = np.asarray(im)
   im = np.expand_dims(im, axis=0)
+  global p
   p = model.predict(im)
 
 if __name__ == '__main__':
