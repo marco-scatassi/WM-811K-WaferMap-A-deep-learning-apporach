@@ -79,7 +79,7 @@ if __name__ == '__main__':
   
   for i in range(len(cols)):
     with cols[i]:
-      st.image(imagesDisplay[selectedType][i], on_click = prediction(imagesDisplay[selectedType][i]))
+      st.image(imagesDisplay[selectedType][i], on_click = prediction(imagesDeploy[selectedType][i]))
       buttons.append(st.button('Image '+str(i)))
       st.write('##')
       st.image(imagesDisplay[selectedType][i+5])
