@@ -89,4 +89,5 @@ if __name__ == '__main__':
     im = im[:,:,0]
     st.write(im.shape)
     im = np.expand_dims(im, axis=0)
+    im = np.expand_dims(im, axis=3)
     model.predict(im)
