@@ -56,7 +56,7 @@ model = keras.models.load_model(model_path)
 def prediction(im):
   im = np.asarray(im)
   im = np.expand_dims(im, axis=0)
-  st.write(model.predict(im))
+  return model.predict(im)
   
 
 st.set_page_config(layout = "wide")
