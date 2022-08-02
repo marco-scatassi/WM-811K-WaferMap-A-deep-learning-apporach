@@ -82,5 +82,5 @@ if __name__ == '__main__':
       
   if buttons[0]:
     pill_im = imagesDeploy[failureTypes[0]][0]
-    im = tf.keras.preprocessing.image.img_to_array(pill_im)
+    im = tf.keras.utils.img_to_array(pill_im)
     model.predict(im)
