@@ -61,7 +61,7 @@ p = np.empty([1,9])
 def prediction(im):
   im = np.asarray(im)
   im = np.expand_dims(im, axis=0)
-  st.write(model.predict(im))
+  p = model.predict(im)
 
 if __name__ == '__main__':
   st.title("WM-811K WaferMap")
