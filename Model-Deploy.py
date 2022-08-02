@@ -86,6 +86,6 @@ if __name__ == '__main__':
     st.write(pill_im)
     im = np.asarray(pill_im)
     st.write(im.shape)
-    im.reshape((im.shape[0], im.shape[1], 4))
+    im = im[:,:,1]
     st.write(im.shape)
     model.predict(im)
