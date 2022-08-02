@@ -83,5 +83,6 @@ if __name__ == '__main__':
   if buttons[0]:
     pill_im = imagesDeploy[failureTypes[0]][0]
     st.write(pill_im.size)
-    im = tf.keras.utils.img_to_array(pill_im)
+    im = np.asarray(pill_im)
+    im.reshape((im.shape[0], im.shape[1], 3))
     model.predict(im)
