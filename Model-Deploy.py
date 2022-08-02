@@ -88,4 +88,4 @@ if __name__ == '__main__':
       buttons.append(st.button('Image '+str(i+5), on_click = prediction, args = (imagesDeploy[selectedType][i+5],)))
       
 
-    
+ st.write(p)
