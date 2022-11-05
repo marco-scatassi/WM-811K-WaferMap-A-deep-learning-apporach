@@ -62,11 +62,11 @@ st.set_page_config(layout = "wide")
 def prediction(im):
   im = np.asarray(im)
   im = np.expand_dims(im, axis=0)
-  all_pr = np.round(model.predict(im),4)
-  class_pr = np.argmax(all_pr)
+  all_pr = np.round(model.predict(im),6)
+  class_pr = failureTypes[np.argmax(all_pr)]
   print_all_pr = pandas.DataFrame(all_pr, columns=failureTypes)
   st.session_state.all_pr = print_all_pr
-  st.session_state.class_pr = class_pr
+  st.session_state.class_pr = 
 
 if __name__ == '__main__':
   st.title("WM-811K WaferMap")
