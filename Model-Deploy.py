@@ -21,7 +21,6 @@ paths = [center_path,
   edgeLoc_path,
   edgeRing_path,
   loc_path,
-  edgeLoc_path,
   nearFull_path,
   random_path,
   scratch_path,
@@ -32,7 +31,6 @@ failureTypes = ['Center',
   'Edge-Loc',
   'Edge-Ring',
   'Loc',
-  'Edge-Loc',
   'Near-full',
   'Random',
   'Scratch',
@@ -62,8 +60,8 @@ def prediction(im):
   im = np.asarray(im)
   im = np.expand_dims(im, axis=0)
   pr = model.predict(im)
-  #print_pr = pandas.DataFrame(pr, columns=failureTypes)
-  st.session_state.pr = pr
+  print_pr = pandas.DataFrame(pr, columns=failureTypes)
+  st.session_state.pr = print_pr
 
 if __name__ == '__main__':
   st.title("WM-811K WaferMap")
