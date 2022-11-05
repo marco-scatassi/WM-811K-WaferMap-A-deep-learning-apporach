@@ -62,6 +62,7 @@ def prediction(im):
   im = np.expand_dims(im, axis=0)
   global pr
   pr = model.predict(im)
+  st.write(pr)
 
 if __name__ == '__main__':
   st.title("WM-811K WaferMap")
