@@ -53,15 +53,16 @@ for i in range(len(failureTypes)):
 model_path = 'Models/model0_1'
 model = keras.models.load_model(model_path)
 
-pr = ''
+if 'pr' not in st.session_state:
+  st.session_state.pr = ''
 
 st.set_page_config(layout = "wide")
 
 def prediction(im):
   im = np.asarray(im)
   im = np.expand_dims(im, axis=0)
-  global pr
   pr = model.predict(im)
+  st.session_state.pr = pr
 
 if __name__ == '__main__':
   st.title("WM-811K WaferMap")
@@ -89,4 +90,4 @@ if __name__ == '__main__':
       
   for i in range(len(buttons)):
     if buttons[i]:
-      st.write(pr)
+      st.session_state.pr
