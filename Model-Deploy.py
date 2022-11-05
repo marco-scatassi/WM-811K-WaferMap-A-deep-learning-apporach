@@ -97,8 +97,12 @@ if __name__ == '__main__':
   for i in range(len(buttons)):
     if buttons[i]:
       st.session_state.all_pr
+    else:
+      st.write("choose an image")
 
   st.subheader("Class predicted")
   for i in range(len(buttons)):
     if buttons[i]:
       st.session_state.class_pr
+    else:
+      st.write("choose an image")
