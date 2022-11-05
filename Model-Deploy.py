@@ -51,17 +51,23 @@ for i in range(len(failureTypes)):
 model_path = 'Models/model0_1'
 model = keras.models.load_model(model_path)
 
-if 'pr' not in st.session_state:
-  st.session_state.pr = ''
+if 'all_pr' not in st.session_state:
+  st.session_state.all_pr = ''
+  
+if 'class_pr' not in st.session_state:
+  st.session_state.class_pr = ''
 
 st.set_page_config(layout = "wide")
 
 def prediction(im):
   im = np.asarray(im)
   im = np.expand_dims(im, axis=0)
-  pr = model.predict(im)
-  print_pr = pandas.DataFrame(pr, columns=failureTypes)
-  st.session_state.pr = print_pr
+  all_pr = np.round(model.predict(im),4)
+  class_pr = np.max(all_pr)
+  class_pr_index = np.argmax(all_pr)
+  print_all_pr = pandas.DataFrame(all_pr, columns=failureTypes)
+  print_class_pr = pandas.DataFrame(class_pr, columns=failureTypes[class_pr_index])
+  st.session_state.pr = print_all_pr
 
 if __name__ == '__main__':
   st.title("WM-811K WaferMap")
@@ -91,4 +97,9 @@ if __name__ == '__main__':
   st.subheader("Probability to belong to a specific failure types class")
   for i in range(len(buttons)):
     if buttons[i]:
-      st.session_state.pr
+      st.session_state.all_pr
+
+  st.subheader("Class predicted")
+  for i in range(len(buttons)):
+    if buttons[i]:
+      st.session_state.class_pr
