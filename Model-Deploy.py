@@ -62,8 +62,8 @@ def prediction(im):
   im = np.asarray(im)
   im = np.expand_dims(im, axis=0)
   pr = model.predict(im)
-  print_pr = pandas.DataFrame(pr, columns=failureTypes)
-  st.session_state.pr = print_pr
+  #print_pr = pandas.DataFrame(pr, columns=failureTypes)
+  st.session_state.pr = pr
 
 if __name__ == '__main__':
   st.title("WM-811K WaferMap")
