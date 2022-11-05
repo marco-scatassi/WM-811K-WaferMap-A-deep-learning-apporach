@@ -66,7 +66,7 @@ def prediction(im):
   class_pr = failureTypes[np.argmax(all_pr)]
   print_all_pr = pandas.DataFrame(all_pr, columns=failureTypes)
   st.session_state.all_pr = print_all_pr
-  st.session_state.class_pr = 
+  st.session_state.class_pr = class_pr
 
 if __name__ == '__main__':
   st.title("WM-811K WaferMap")
