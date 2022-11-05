@@ -3,3 +3,4 @@ plotly
 matplotlib
 tensorflow
 numpy
+pandas
