@@ -62,7 +62,8 @@ def prediction(im):
   im = np.asarray(im)
   im = np.expand_dims(im, axis=0)
   pr = model.predict(im)
-  st.session_state.pr = pr
+  print_pr = pd.DataFrame(pr, columns=failureTypes)
+  st.session_state.pr = print_pr
 
 if __name__ == '__main__':
   st.title("WM-811K WaferMap")
@@ -87,7 +88,9 @@ if __name__ == '__main__':
       st.write('##')
       st.image(imagesDisplay[selectedType][i+5])
       buttons.append(st.button('Image '+str(i+5), on_click = prediction, args = (imagesDeploy[selectedType][i+5],)))
-      
+  
+  st.write('##')
+  st.subheader("Probability to belong to a specific failure types class")
   for i in range(len(buttons)):
     if buttons[i]:
       st.session_state.pr
