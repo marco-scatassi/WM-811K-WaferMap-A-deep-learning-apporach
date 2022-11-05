@@ -63,11 +63,10 @@ def prediction(im):
   im = np.asarray(im)
   im = np.expand_dims(im, axis=0)
   all_pr = np.round(model.predict(im),4)
-  class_pr = np.max(all_pr)
-  class_pr_index = np.argmax(all_pr)
+  class_pr = np.argmax(all_pr)
   print_all_pr = pandas.DataFrame(all_pr, columns=failureTypes)
-  print_class_pr = pandas.DataFrame(class_pr, columns=failureTypes[class_pr_index])
-  st.session_state.pr = print_all_pr
+  st.session_state.all_pr = print_all_pr
+  st.session_state.class_pr = class_pr
 
 if __name__ == '__main__':
   st.title("WM-811K WaferMap")
