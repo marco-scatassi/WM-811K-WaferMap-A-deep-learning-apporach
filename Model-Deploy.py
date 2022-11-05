@@ -62,7 +62,7 @@ st.set_page_config(layout = "wide")
 def prediction(im):
   im = np.asarray(im)
   im = np.expand_dims(im, axis=0)
-  all_pr = np.round(model.predict(im),6)
+  all_pr = model.predict(im)
   class_pr = failureTypes[np.argmax(all_pr)]
   print_all_pr = pandas.DataFrame(all_pr, columns=failureTypes)
   st.session_state.all_pr = print_all_pr
