@@ -2,8 +2,7 @@ import streamlit as st
 from PIL import Image
 import tensorflow as tf
 import numpy as np
-import pandas as pd
-
+import pandas 
 from tensorflow import keras
 
 center_path = 'Image_for_deploy/Center/'
@@ -63,7 +62,7 @@ def prediction(im):
   im = np.asarray(im)
   im = np.expand_dims(im, axis=0)
   pr = model.predict(im)
-  print_pr = pd.DataFrame(pr, columns=failureTypes)
+  print_pr = pandas.DataFrame(pr, columns=failureTypes)
   st.session_state.pr = print_pr
 
 if __name__ == '__main__':
