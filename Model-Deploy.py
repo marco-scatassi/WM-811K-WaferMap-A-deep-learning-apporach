@@ -79,7 +79,7 @@ if __name__ == '__main__':
     "you can see the class predicted for that image by the model and the probability of belonging to each class (i.e. the output of the model). \n"
     ,unsafe_allow_html=True
   )
-  
+  st.write("##")
   
   
   col1, col2 = st.columns([1,5])
