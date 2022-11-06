@@ -5,7 +5,7 @@ to take necessary actions faster and in a targeted manner. In this repo, you can
 
 <p align="center"> Center - Donut - Edge-Loc - Edge-Ring - Loc - Near-full - Random - Scratch - none </p>
 
-Due to the extreme imbalance of the dataset, both among failure classes and between the non failure class (none) and the failure classes, we have focused on the generation of synthetic data that together with classical augmentation techniques have lead in improve model performance. In particular, the final model shows more uniform performance across classes than the initial one as well as a greater mean percentual of correct classified images.
+Due to the **extreme imbalance of the dataset**, both among failure classes and between the non failure class (none) and the failure classes, we have focused on the **generation of synthetic data** that together with classical augmentation techniques have lead in improve model performance. In particular, the final model shows more uniform performance across classes than the initial one as well as a greater mean percentual of correct classified images.
 
 
 |           | Initial Model | Final Model | Difference in  performance |
