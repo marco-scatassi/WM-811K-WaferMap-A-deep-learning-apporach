@@ -74,7 +74,8 @@ if __name__ == '__main__':
   st.markdown(
     "In this page is possible to play with a **CNN model** developed to approach the task of **semiconductor wafermaps failure detection and recognition**. " +
     "In particular, the problem consists in identify the type of defect of a specific wafermap among 9:\n" +
-    "<center Center - Donut - Edge-Loc - Edge-Ring - Loc - Near-full - Random - Scratch - none'/>"
+    "<center Center - Donut - Edge-Loc - Edge-Ring - Loc - Near-full - Random - Scratch - none'/>",
+    unsafe_allow_html=True
   )
   
   
