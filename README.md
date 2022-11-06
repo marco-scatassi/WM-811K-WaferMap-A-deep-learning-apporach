@@ -23,4 +23,4 @@ Due to the extreme imbalance of the dataset, both among failure classes and betw
 
 More details can be found in the *Presentation slides.pdf*. 
 
-In addition following this link https://marco-scatassi-wm-811k-wafermap-a-deep-lear-model-deploy-vy0bqn.streamlit.app/ it's possible to play a little with one of the tested models in order to see how it works. I hope you will enjoy it 😄.
+In addition, following this link https://marco-scatassi-wm-811k-wafermap-a-deep-lear-model-deploy-vy0bqn.streamlit.app/ it's possible to play a little with one of the tested models in order to see how it works. I hope you will enjoy it 😄.
