@@ -75,7 +75,7 @@ if __name__ == '__main__':
     "In this page is possible to play with a **CNN model** developed to approach the task of **semiconductor wafermaps failure detection and recognition**. " +
     "In particular, the problem consists in identify the type of defect of a specific wafermap among 9:\n" +
     "<p style='font-style: italic;text-align:center'> Center - Donut - Edge-Loc - Edge-Ring - Loc - Near-full - Random - Scratch - none </p>" + "\n" +
-    "Selecting a type of failure will show you 10 images associated with that specific defect. Clicking in the button under a certain image you can see the " +
+    "Selecting a type of failure will show you 10 images associated with that specific defect. Clicking the button under a certain image you can see the " +
     "<span style='font-weight:bold'> class predicted </span> for that image by the model and the" + 
     "<span style='font-weight:bold'> probability of belonging to each class </span> (i.e. the output of the model)."
     ,unsafe_allow_html=True
