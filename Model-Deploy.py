@@ -78,7 +78,7 @@ if __name__ == '__main__':
     "Selecting a type of failure will show you 10 images associated with that specific defect. Clicking in the button under a certain image " 
     ,unsafe_allow_html=True
   )
-  st.markdown("you can see the **class predicted** for that image by the model and the **probability of belonging to each class** (i.e. the output of the model).)
+  st.markdown("you can see the **class predicted** for that image by the model and the **probability of belonging to each class** (i.e. the output of the model).")
   st.write("##")
   
   
