@@ -70,7 +70,7 @@ def prediction(im):
 
 if __name__ == '__main__':
   st.title("WM-811K WaferMap")
-  st.subtitle("Summary")
+  st.subheader("Summary")
   st.write(
     "In this page is possible to play with a CNN model developed as first approach to the deep learning world." + 
     "Model evaluation for semiconductor wafermap detection and recognition using CNNs."
